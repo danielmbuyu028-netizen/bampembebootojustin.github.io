@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>' Bampembe Booto Justin '</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            line-height: 1.6; 
+            background: linear-gradient(135deg, #0c0c0e 0%, #1a1a2e 50%, #16213e 100%); 
+            color: #e0e0e0; 
+            min-height: 100vh; 
+        }
+        
+        /* [même CSS que le tien - pas de changement] */
+        .hero {
+            background: linear-gradient(135deg, rgba(26,26,46,0.95), rgba(22,33,62,0.95));
+            padding: 4rem 2rem; 
+            text-align: center; 
+            border-bottom: 1px solid #0a84ff40;
+        }
+        .hero h1 { 
+            font-size: 3.5rem; 
+            background: linear-gradient(135deg, #ffffff, #0a84ff); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem; 
+            font-weight: 700;
+        }
+        .hero .subtitle { 
+            font-size: 1.3rem; 
+            color: #b0b0b0; 
+            margin-bottom: 2rem;
+        }
+        
+        section { 
+            max-width: 1200px; 
+            margin: 3rem auto; 
+            padding: 0 2rem; 
+        }
+        h2 { 
+            color: #ffffff; 
+            font-size: 2.2rem; 
+            text-align: center; 
+            margin-bottom: 2rem; 
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #0a84ff, #00d4ff);
+            margin: 1rem auto;
+        }
+        
+        .bio { 
+            background: rgba(184, 167, 167, 0.05); 
+            backdrop-filter: blur(10px);
+            padding: 2.5rem; 
+            border-radius: 20px; 
+            border: 1px solid rgba(65, 54, 54, 0.1);
+            font-size: 1.1rem; 
+        }
+        
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 1.5rem; 
+            margin: 2rem 0; 
+        }
+        .gallery img { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.2s ease; 
+        }
+        .gallery img:hover { 
+            transform: translateY(-5px); 
+        }
+        .gallery figcaption { 
+            text-align: center; 
+            margin-top: 0.8rem; 
+            color: #b0b0b0; 
+            font-weight: 500;
+        }
+        
+        .excel-grid {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            border: 1px solid rgba(10,132,255,0.4);
+            overflow: hidden;
+            margin: 2rem auto;
+            max-width: 900px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .excel-grid table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(20,20,40,0.9);
+        }
+        .excel-grid th {
+            background: linear-gradient(135deg, #0a84ff, #0066cc);
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: 600;
+            border-right: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+        }
+        .excel-grid td {
+            height: 35px;
+            min-width: 120px;
+            padding: 4px 8px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            color: #e0e0e0;
+        }
+        .excel-grid input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            color: #e0e0e0;
+            padding: 4px 8px;
+            font-size: 14px;
+            outline: none;
+            font-family: inherit;
+        }
+        .excel-grid input:focus {
+            background: rgba(230, 211, 211, 0.2);
+            box-shadow: 0 0 0 2px rgba(162, 182, 202, 0.5);
+        }
+        .excel-grid td:hover {
+            background: rgba(10,132,255,0.2);
+        }
+        
+        .grid-controls {
+            text-align: center;
+            margin: 1rem 0;
+            color: #ffffff;
+        }
+        
+        footer { 
+            text-align: center; 
+            padding: 2rem; 
+            background: rgba(64, 56, 77, 0.95); 
+            color: #b0b0b0; 
+            border-top: 1px solid rgba(133, 96, 96, 0.1);
+        }
+        
+        @media (max-width: 768px) { 
+            .hero h1 { font-size: 2.5rem; } 
+            section { padding: 0 1rem; } 
+            .gallery { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+            .excel-grid td { min-width: 80px; height: 32px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- [même hero et bio que le tien] -->
+    <div class="hero">
+        <h1>Bampembe Booto Justin</h1>
+        <p class="subtitle">Étudiant • Préparatoire ESI (C) • Université de Lubumbashi</p>
+    </div>
+
+    <section id="bio">
+        <h2>Biographie</h2>
+        <div class="bio">
+            <p><strong>Bampembe Booto Justin</strong>, né le 15 mars 2008 à KANANGA plus précisement en République Démocratique du Congo (RDC), est étudiant en Préparatoire ESI (PRE ESI, C) à la Faculté de l'Ecole Superieure Des Ingenieurs Industriels à Lubumbashi.</p>
+            <p>de Nationalité Congolaise, et grandit à Lubumbashi, a opté pour l'option Scientifique aux Humanités, et après avoir obtenus avec succè son Diplome d'Etat, il se décide de poursuivre ses études dans un monde Universitaire, et il a pour ambition de choisir Le Géni Civil en Bac1.</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Parcours Visuel à partir des Mes Photos</h2>
+        <div class="gallery">
+            <figure>
+                <img src="img/img3ans.jpg" alt="Justin à 3 ans">
+                <figcaption>Moi, à 3 ans</figcaption>
+            </figure>
+            <figure>
+                <img src="img/img13ans1.jpg" alt="Justin à 13 ans">
+                <figcaption>Moi, à 13 ans</figcaption>
+            </figure>
+            <figure>
+                <img src="img/img13ans2.jpg" alt="Justin à 13 ans">
+                <figcaption>Moi, à 13 ans</figcaption>
+            </figure>
+            <figure>
+                <img src="img/img18ans1.jpg" alt="Justin 17 ans">
+                <figcaption>Moi, à 17 ans</figcaption>
+            </figure>
+            <figure>
+                <img src="img/img18ans2.jpg" alt="Justin étudiant">
+                <figcaption>Et me voici actuellement en 2026 • Étudiant à UNILU | PRéESI C</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="grid">
+        <h2>Tableau de 4 Colonnes et 16 Lignes</h2>
+        <div class="excel-grid">
+            <table>
+                <tbody>
+                    <!-- EXACTEMENT 16 LIGNES VIDES -->
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    <tr><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="grid-controls">
+            <p>Cliquez sur n'importe quelle cellule du tableau ci-dessus pour éditer !</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Bampembe Booto Justin | Lubumbashi | UNILU - PRéESI C</p>
+    </footer>
+</body>
+</html>
